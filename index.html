@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="tg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дафтари калимаҳои англисӣ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <header class="topbar">
+            <div class="brand">
+                <h1>Дафтари калимаҳо</h1>
+                <p>20 калима дар як варақ, баъд машқҳои кӯтоҳ то омӯзиш ширин шавад.</p>
+            </div>
+            <section class="progress-card" aria-label="Пешрафт">
+                <div class="progress-line">
+                    <span id="progressLabel">Пешрафт: 0%</span>
+                    <span id="pageScore">Саҳифа 1</span>
+                </div>
+                <div class="meter"><span id="progressMeter"></span></div>
+            </section>
+        </header>
+
+        <nav class="controls" aria-label="Интихоби саҳифа">
+            <div class="page-tabs" id="pageTabs"></div>
+            <input class="search" id="searchInput" type="search" placeholder="Ҷустуҷӯ: English ё тоҷикӣ">
+        </nav>
+
+        <section class="sheet">
+            <div class="sheet-head">
+                <div>
+                    <h2 id="pageTitle">Саҳифаи 1</h2>
+                    <p id="pageSubtitle">Калимаҳои асосӣ</p>
+                </div>
+                <div class="badge" id="wordCount">20 калима</div>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>English</th>
+                            <th>Талафуз</th>
+                            <th>Тарҷума</th>
+                            <th>Мисол</th>
+                        </tr>
+                    </thead>
+                    <tbody id="wordRows"></tbody>
+                </table>
+            </div>
+
+            <div class="note" id="tipNote"></div>
+
+            <section class="exercise" id="exerciseSection">
+                <div class="exercise-head">
+                    <h3>Машқи саҳифа</h3>
+                    <div class="rounds" id="rounds"></div>
+                </div>
+
+                <div class="challenge active" id="round1">
+                    <div id="quizBox"></div>
+                </div>
+
+                <div class="challenge" id="round2">
+                    <p class="rule"><strong>Қоида:</strong> Калимаи англисиро бо ҳарфи калон ва бе хато нависед. Агар хато шавад, ҷавоби дуруст нишон дода мешавад ва он майдон баста мешавад.</p>
+                    <div id="writeBox"></div>
+                </div>
+
+                <div class="challenge" id="round3">
+                    <p class="rule"><strong>Қоида:</strong> Ҷумлаи тоҷикӣро хонед, баъд калимаҳои англисиро зер кунед ва онҳоро бо тартиби дуруст ҷойгир намоед.</p>
+                    <div id="sentenceTaskBox"></div>
+                </div>
+
+                <div class="actions">
+                    <button class="action-btn" id="checkBtn">Санҷидан</button>
+                    <button class="action-btn secondary" id="newBtn">Саволҳои нав</button>
+                    <button class="action-btn secondary" id="exerciseJump">Ба машқ рафтан</button>
+                </div>
+
+                <div class="result" id="resultBox"></div>
+                <div class="celebration" id="celebration"></div>
+            </section>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
