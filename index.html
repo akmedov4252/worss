@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tg">
 <head>
     <meta charset="UTF-8">
@@ -39,6 +39,7 @@
                 <div class="badge" id="wordCount">20 калима</div>
             </div>
 
+            <!-- БАХШИ ЛУҒАТ (Таблица) -->
             <div class="table-wrap">
                 <table>
                     <thead>
@@ -57,6 +58,16 @@
             <div class="note" id="tipNote"></div>
 
             <section class="exercise" id="exerciseSection">
+                
+                <!-- МАЙДОНИ НОМУ НАСАБ -->
+                <div style="background: #e8f3ff; border: 2px solid #2f80ed; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+                    <label for="studentNameInput" style="font-weight: 900; display: block; margin-bottom: 6px; color: #16324f;">
+                        👤 Ному насаби худро нависед (Ҳатмӣ):
+                    </label>
+                    <input class="search" id="studentNameInput" type="text" placeholder="Масалан: Самадов Ахмад" style="width: 100%;">
+                </div>
+
+                <!-- БАХШИ ТЕСТ ВА МАШҚҲО -->
                 <div class="exercise-head">
                     <h3>Машқи саҳифа</h3>
                     <div class="rounds" id="rounds"></div>
@@ -67,12 +78,12 @@
                 </div>
 
                 <div class="challenge" id="round2">
-                    <p class="rule"><strong>Қоида:</strong> Калимаи англисиро бо ҳарфи калон ва бе хато нависед. Агар хато шавад, ҷавоби дуруст нишон дода мешавад ва он майдон баста мешавад.</p>
+                    <p class="rule"><strong>Қоида:</strong> Калимаи англисиро бе хато нависед. Агар хато шавад, ҷавоби дуруст нишон дода мешавад.</p>
                     <div id="writeBox"></div>
                 </div>
 
                 <div class="challenge" id="round3">
-                    <p class="rule"><strong>Қоида:</strong> Ҷумлаи тоҷикӣро хонед, баъд калимаҳои англисиро зер кунед ва онҳоро бо тартиби дуруст ҷойгир намоед.</p>
+                    <p class="rule"><strong>Қоида:</strong> Ҷумлаи тоҷикиро хонед, баъд калимаҳои англисиро зер кунед ва онҳоро бо тартиби дуруст ҷойгир намоед.</p>
                     <div id="sentenceTaskBox"></div>
                 </div>
 
@@ -84,6 +95,31 @@
 
                 <div class="result" id="resultBox"></div>
                 <div class="celebration" id="celebration"></div>
+
+                <!-- БАХШИ READING ВА САБТИ ОВОЗ -->
+                <section class="reading-card" style="margin-top: 25px; padding: 20px; background: #ffffff; border: 2px dashed #2f80ed; border-radius: 12px;">
+                    <h3 style="font-family: 'Caveat', cursive; font-size: 2.2rem; color: #16324f; margin-top: 0;">📖 Бахши хониш (Reading)</h3>
+                    
+                    <div id="readingText" style="padding: 15px; background: #f8fafc; border-left: 4px solid #2f80ed; border-radius: 6px; font-size: 1.1rem; line-height: 1.6; margin-bottom: 15px; color: #1e293b;">
+                        <strong>Матни хониш:</strong><br>
+                        <em id="readingTextContent">Tajikistan is a republic with its own law...</em>
+                    </div>
+
+                    <p style="font-weight: 800; color: #334155; margin-bottom: 10px;">Матни болоро бо овози баланд хонед ва сабт кунед:</p>
+                    
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 15px;">
+                        <button id="startRecBtn" type="button" class="action-btn" style="background: #ef4444; box-shadow: 0 4px 0 #991b1b;">🎙 Оғози сабт</button>
+                        <button id="stopRecBtn" type="button" class="action-btn secondary" disabled style="background: #64748b; box-shadow: 0 4px 0 #334155;">⏹ Боздоштан</button>
+                        <span id="recStatus" style="font-weight: 800; color: #64748b;">Овоз сабт нашудааст</span>
+                    </div>
+
+                    <audio id="audioPreview" controls style="display: none; width: 100%; margin-bottom: 15px;"></audio>
+
+                    <button id="sendVoiceBtn" type="button" class="action-btn" style="display: none; background: #20a464; box-shadow: 0 4px 0 #137344; width: 100%;">
+                        📤 Сабти овозро ба боти муаллим фиристодан
+                    </button>
+                </section>
+
             </section>
         </section>
     </main>
